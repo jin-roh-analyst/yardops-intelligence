@@ -3,7 +3,7 @@ import { getAllDashboardData } from "@/lib/data";
 import { currency, number, percent } from "@/lib/formatters";
 import { KpiCard } from "@/components/cards/KpiCard";
 import { ChartPanel } from "@/components/charts/ChartPanel";
-import { ComparisonChart, LineMetricChart, MultiBarChart, SimpleBarChart } from "@/components/charts/Charts";
+import { ComparisonChart, MultiBarChart, SimpleBarChart, YardMapChart } from "@/components/charts/Charts";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default async function DashboardPage() {
@@ -51,13 +51,12 @@ export default async function DashboardPage() {
       </div>
       <section className="section grid two-col">
         <ChartPanel
-          title="Retrieval Time by Yard"
-          note="Average retrieval duration across each synthetic yard."
-          xAxis="Each operating yard in the synthetic network."
-          yAxis="Average minutes from retrieval start to handoff-ready movement."
-          takeaway="Lower values indicate faster yard access and less internal travel time."
+          title="Retrieval Time by Yard Map"
+          note="Synthetic yard locations are plotted across the regional operating footprint."
+          legend="Larger and darker blue markers indicate slower average retrieval time."
+          takeaway="Hover over each marker to compare retrieval minutes, utilization, congestion, and event volume."
         >
-          <LineMetricChart data={yard.yards} xKey="yard_id" yKey="avg_retrieval_duration_minutes" yUnit="minutes" angleLabels />
+          <YardMapChart data={yard.yards} />
         </ChartPanel>
         <ChartPanel
           title="Quote Acceptance by Partner Tier"

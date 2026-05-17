@@ -255,3 +255,69 @@ export function ComparisonChart({
     </ResponsiveContainer>
   );
 }
+
+const yardMapPoints: Record<string, { name: string; label: string; x: number; y: number }> = {
+  YARD_DAL_01: { name: "Dallas North Yard", label: "DAL", x: 60, y: 32 },
+  YARD_HOU_01: { name: "Houston East Yard", label: "HOU", x: 67, y: 78 },
+  YARD_AUS_01: { name: "Austin Central Yard", label: "AUS", x: 44, y: 64 },
+  YARD_OKC_01: { name: "Oklahoma City Yard", label: "OKC", x: 48, y: 14 }
+};
+
+function metricRange(data: RecordRow[], key: string) {
+  const values = data.map((row) => Number(row[key])).filter(Number.isFinite);
+  const min = values.length ? Math.min(...values) : 0;
+  const max = values.length ? Math.max(...values) : 1;
+  return { min, max, spread: Math.max(max - min, 0.01) };
+}
+
+export function YardMapChart({ data }: { data: RecordRow[] }) {
+  const range = metricRange(data, "avg_retrieval_duration_minutes");
+
+  return (
+    <div className="yard-map" aria-label="Map of synthetic yard retrieval performance">
+      <svg className="yard-map-region" viewBox="0 0 100 100" role="img" aria-label="Schematic Texas and Oklahoma yard region">
+        <path d="M39 8 L72 8 L78 31 L74 48 L88 61 L77 87 L49 91 L31 78 L22 53 L30 35 Z" />
+        <path d="M35 8 L71 8 L71 24 L34 24 Z" />
+        <path d="M30 35 L74 35" />
+        <path d="M42 24 L42 91" />
+      </svg>
+      {data.map((yard) => {
+        const yardId = String(yard.yard_id);
+        const point = yardMapPoints[yardId] ?? { name: yardId, label: yardId.replace("YARD_", "").slice(0, 3), x: 50, y: 50 };
+        const retrievalMinutes = Number(yard.avg_retrieval_duration_minutes);
+        const intensity = (retrievalMinutes - range.min) / range.spread;
+        const size = 34 + intensity * 18;
+        const fill = intensity > 0.66 ? "#1d4ed8" : intensity > 0.33 ? "#2563eb" : "#60a5fa";
+        return (
+          <div
+            className="yard-map-point"
+            key={yardId}
+            style={{
+              left: `${point.x}%`,
+              top: `${point.y}%`,
+              width: size,
+              height: size,
+              background: fill
+            }}
+            tabIndex={0}
+            aria-label={`${point.name}: ${metricValue(retrievalMinutes, "minutes")} average retrieval time`}
+          >
+            <span>{point.label}</span>
+            <div className="yard-map-tooltip">
+              <strong>{point.name}</strong>
+              <em>{yardId}</em>
+              <span>Average retrieval: {metricValue(retrievalMinutes, "minutes")}</span>
+              <span>Total retrievals: {metricValue(Number(yard.total_retrievals), "count")}</span>
+              <span>Utilization: {metricValue(Number(yard.avg_occupancy_rate), "percent")}</span>
+              <span>Congestion: {metricValue(Number(yard.avg_congestion_score), "score")}</span>
+            </div>
+          </div>
+        );
+      })}
+      <div className="yard-map-legend" aria-hidden="true">
+        <span><i className="yard-map-low" /> Faster retrieval</span>
+        <span><i className="yard-map-high" /> Slower retrieval</span>
+      </div>
+    </div>
+  );
+}

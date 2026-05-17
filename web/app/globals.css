@@ -318,6 +318,135 @@ h3 {
   border-radius: 999px;
 }
 
+.yard-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(239, 246, 255, 0.72), rgba(255, 255, 255, 0.30)),
+    radial-gradient(circle at 58% 42%, rgba(96, 165, 250, 0.22), transparent 34%);
+}
+
+.yard-map-region {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+}
+
+.yard-map-region path {
+  fill: rgba(219, 234, 254, 0.50);
+  stroke: rgba(37, 99, 235, 0.34);
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.yard-map-region path:nth-child(n + 3) {
+  fill: none;
+  stroke: rgba(37, 99, 235, 0.18);
+  stroke-dasharray: 4 5;
+}
+
+.yard-map-point {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.24);
+  color: white;
+  cursor: default;
+  font-size: 11px;
+  font-weight: 800;
+  outline: none;
+}
+
+.yard-map-point:focus-visible {
+  box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.72), 0 14px 28px rgba(37, 99, 235, 0.24);
+}
+
+.yard-map-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  z-index: 5;
+  display: none;
+  min-width: 220px;
+  transform: translateX(-50%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow);
+  padding: 10px 12px;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.yard-map-tooltip strong,
+.yard-map-tooltip em,
+.yard-map-tooltip span {
+  display: block;
+}
+
+.yard-map-tooltip strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.yard-map-tooltip em {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.yard-map-point:hover .yard-map-tooltip,
+.yard-map-point:focus .yard-map-tooltip {
+  display: block;
+}
+
+.yard-map-legend {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.yard-map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.yard-map-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.yard-map-low {
+  background: #60a5fa;
+}
+
+.yard-map-high {
+  background: #1d4ed8;
+}
+
 .insight-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
