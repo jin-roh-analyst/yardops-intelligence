@@ -28,7 +28,7 @@ export default async function RetrievalPage() {
           yAxis="Number of retrieval events."
           takeaway="Large bars show the most frequent operational causes to investigate first."
         >
-          <SimpleBarChart data={retrieval.delay_reasons} xKey="delay_reason" yKey="retrieval_count" color="#b42318" yUnit="count" angleLabels />
+          <SimpleBarChart data={retrieval.delay_reasons} xKey="delay_reason" yKey="retrieval_count" color="#1d4ed8" yUnit="count" angleLabels />
         </ChartPanel>
         <ChartPanel
           title="Equipment Impact"
@@ -54,10 +54,10 @@ export default async function RetrievalPage() {
           title="Pickup Type Impact"
           note="Carrier pickups and internal moves behave differently operationally."
           xAxis="Pickup workflow type."
-          yAxis="Average request-to-handoff wait time in minutes."
-          takeaway="Higher wait times indicate where yard coordination or staging can improve."
+          yAxis="Average request-to-handoff wait time in minutes. Axis is zoomed to show small differences."
+          takeaway="Higher relative wait times indicate where yard coordination or staging can improve."
         >
-          <SimpleBarChart data={retrieval.pickup_types} xKey="pickup_type" yKey="avg_wait_time_minutes" color="#2563eb" yUnit="minutes" angleLabels />
+          <SimpleBarChart data={retrieval.pickup_types} xKey="pickup_type" yKey="avg_wait_time_minutes" color="#2563eb" yUnit="minutes" angleLabels yDomainMode="tight" />
         </ChartPanel>
       </section>
       <section className="section insight-strip">

@@ -72,10 +72,10 @@ export default async function DashboardPage() {
           title="Margin by Pricing Strategy"
           note="Scenario outputs summarize expected margin across optimizer strategies."
           xAxis="Pricing strategy used in the scenario."
-          yAxis="Average expected gross margin in dollars."
-          takeaway="Compare strategy profitability before considering partner acceptance tradeoffs."
+          yAxis="Average expected gross margin in dollars. Axis is zoomed to show small differences."
+          takeaway="Compare relative strategy profitability before considering partner acceptance tradeoffs."
         >
-          <SimpleBarChart data={pricing.by_pricing_strategy} xKey="pricing_strategy" yKey="avg_expected_margin" color="#b7791f" yUnit="currency" angleLabels />
+          <SimpleBarChart data={pricing.by_pricing_strategy} xKey="pricing_strategy" yKey="avg_expected_margin" color="#2563eb" yUnit="currency" angleLabels yDomainMode="tight" />
         </ChartPanel>
         <ChartPanel
           title="Yard Congestion by Zone"

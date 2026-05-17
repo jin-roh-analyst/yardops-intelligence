@@ -60,10 +60,10 @@ export default async function YardSimulatorPage() {
           title="Optimized Efficiency by Vehicle Type"
           note="Vehicle mix affects allocation outcomes and equipment needs."
           xAxis="Vehicle type under the optimized allocation strategy."
-          yAxis="Allocation efficiency score on a 0-100 scale."
-          takeaway="Heavy and non-running mixes usually need more deliberate slot assignment."
+          yAxis="Allocation efficiency score. Axis is zoomed because optimized scores are tightly clustered near 100."
+          takeaway="Small score differences show which vehicle mixes still need more deliberate slot assignment."
         >
-          <SimpleBarChart data={optimizedVehicleEfficiency} xKey="vehicle_type_label" yKey="avg_allocation_efficiency_score" color="#2563eb" yUnit="score" angleLabels />
+          <SimpleBarChart data={optimizedVehicleEfficiency} xKey="vehicle_type_label" yKey="avg_allocation_efficiency_score" color="#2563eb" yUnit="score" angleLabels yDomainMode="tight" />
         </ChartPanel>
       </section>
       <section className="section insight-strip">

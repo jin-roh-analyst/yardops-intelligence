@@ -15,10 +15,11 @@ import {
   YAxis
 } from "recharts";
 
-const colors = ["#2563eb", "#60a5fa", "#0ea5e9", "#14b8a6", "#f59e0b", "#64748b"];
+const colors = ["#1d4ed8", "#2563eb", "#3b82f6", "#60a5fa", "#7dd3fc", "#93c5fd"];
 
 type RecordRow = Record<string, string | number>;
 type Unit = "count" | "minutes" | "percent" | "currency" | "score" | "meters" | "none";
+type DomainMode = "zero" | "tight";
 
 function label(value: string | number) {
   return String(value).replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
@@ -63,6 +64,21 @@ function unitLabel(unit: Unit) {
   if (unit === "score") return "score";
   if (unit === "count") return "count";
   return "";
+}
+
+function numericDomain(data: RecordRow[], key: string, mode: DomainMode) {
+  if (mode !== "tight") {
+    return undefined;
+  }
+  const values = data.map((row) => Number(row[key])).filter(Number.isFinite);
+  if (!values.length) {
+    return undefined;
+  }
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const spread = max - min;
+  const pad = spread === 0 ? Math.max(Math.abs(max) * 0.02, 1) : spread * 0.18;
+  return [Math.max(0, min - pad), max + pad] as [number, number];
 }
 
 const tooltipStyle = {
@@ -112,7 +128,8 @@ export function SimpleBarChart({
   color = "#2563eb",
   yUnit = "none",
   fullLabelKey,
-  angleLabels = false
+  angleLabels = false,
+  yDomainMode = "zero"
 }: {
   data: RecordRow[];
   xKey: string;
@@ -121,13 +138,15 @@ export function SimpleBarChart({
   yUnit?: Unit;
   fullLabelKey?: string;
   angleLabels?: boolean;
+  yDomainMode?: DomainMode;
 }) {
+  const yDomain = numericDomain(data, yKey, yDomainMode);
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data} margin={{ top: 14, right: 18, left: 18, bottom: angleLabels ? 58 : 26 }}>
         <CartesianGrid stroke="#dbe7f6" vertical={false} />
         <XAxis dataKey={xKey} tick={{ fontSize: 12, fill: "#667085" }} tickFormatter={label} tickLine={false} axisLine={false} angle={angleLabels ? -35 : 0} textAnchor={angleLabels ? "end" : "middle"} interval={0} />
-        <YAxis tick={{ fontSize: 12, fill: "#667085" }} tickLine={false} axisLine={false} tickFormatter={(value) => metricValue(Number(value), yUnit)} label={unitLabel(yUnit) ? { value: unitLabel(yUnit), angle: -90, position: "insideLeft", style: { fontSize: 12, fill: "#667085" } } : undefined} />
+        <YAxis domain={yDomain} tick={{ fontSize: 12, fill: "#667085" }} tickLine={false} axisLine={false} tickFormatter={(value) => metricValue(Number(value), yUnit)} label={unitLabel(yUnit) ? { value: unitLabel(yUnit), angle: -90, position: "insideLeft", style: { fontSize: 12, fill: "#667085" } } : undefined} />
         <Tooltip content={<CustomTooltip fullLabelKey={fullLabelKey} units={{ [yKey]: yUnit }} />} contentStyle={tooltipStyle} />
         <Bar dataKey={yKey} name={valueLabel(yKey)} fill={color} radius={[8, 8, 0, 0]} />
       </BarChart>
@@ -200,7 +219,9 @@ export function ComparisonChart({
   barUnit = "none",
   lineUnit = "none",
   fullLabelKey,
-  angleLabels = false
+  angleLabels = false,
+  barDomainMode = "zero",
+  lineDomainMode = "zero"
 }: {
   data: RecordRow[];
   xKey: string;
@@ -210,14 +231,18 @@ export function ComparisonChart({
   lineUnit?: Unit;
   fullLabelKey?: string;
   angleLabels?: boolean;
+  barDomainMode?: DomainMode;
+  lineDomainMode?: DomainMode;
 }) {
+  const barDomain = numericDomain(data, barKey, barDomainMode);
+  const lineDomain = numericDomain(data, lineKey, lineDomainMode);
   return (
     <ResponsiveContainer width="100%" height="100%">
       <ComposedChart data={data} margin={{ top: 14, right: 28, left: 18, bottom: angleLabels ? 86 : 42 }}>
         <CartesianGrid stroke="#dbe7f6" vertical={false} />
         <XAxis dataKey={xKey} tick={{ fontSize: 12, fill: "#667085" }} tickFormatter={label} tickLine={false} axisLine={false} angle={angleLabels ? -35 : 0} textAnchor={angleLabels ? "end" : "middle"} interval={0} />
-        <YAxis yAxisId="left" tick={{ fontSize: 12, fill: "#667085" }} tickLine={false} axisLine={false} tickFormatter={(value) => metricValue(Number(value), barUnit)} label={unitLabel(barUnit) ? { value: unitLabel(barUnit), angle: -90, position: "insideLeft", style: { fontSize: 12, fill: "#667085" } } : undefined} />
-        <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12, fill: "#667085" }} tickLine={false} axisLine={false} tickFormatter={(value) => metricValue(Number(value), lineUnit)} label={unitLabel(lineUnit) ? { value: unitLabel(lineUnit), angle: 90, position: "insideRight", style: { fontSize: 12, fill: "#667085" } } : undefined} />
+        <YAxis yAxisId="left" domain={barDomain} tick={{ fontSize: 12, fill: "#667085" }} tickLine={false} axisLine={false} tickFormatter={(value) => metricValue(Number(value), barUnit)} label={unitLabel(barUnit) ? { value: unitLabel(barUnit), angle: -90, position: "insideLeft", style: { fontSize: 12, fill: "#667085" } } : undefined} />
+        <YAxis yAxisId="right" domain={lineDomain} orientation="right" tick={{ fontSize: 12, fill: "#667085" }} tickLine={false} axisLine={false} tickFormatter={(value) => metricValue(Number(value), lineUnit)} label={unitLabel(lineUnit) ? { value: unitLabel(lineUnit), angle: 90, position: "insideRight", style: { fontSize: 12, fill: "#667085" } } : undefined} />
         <Tooltip content={<CustomTooltip fullLabelKey={fullLabelKey} units={{ [barKey]: barUnit, [lineKey]: lineUnit }} />} contentStyle={tooltipStyle} />
         <Legend verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 12 }} />
         <Bar yAxisId="left" dataKey={barKey} name={valueLabel(barKey)} radius={[8, 8, 0, 0]}>

@@ -21,20 +21,20 @@ export default async function PricingPage() {
           title="Expected Value by Objective"
           note="Scenario expected value combines margin and acceptance probability."
           xAxis="Optimization objective used to evaluate pricing scenarios."
-          yAxis="Left: expected value in dollars. Right: acceptance probability percent."
+          yAxis="Left: expected value in dollars. Right: acceptance probability percent. Both axes are zoomed to show differences."
           legend="Bar: expected value. Line: acceptance probability."
           takeaway="The best objective balances revenue quality with likelihood of winning the quote."
         >
-          <ComparisonChart data={pricing.by_objective} xKey="optimization_objective" barKey="avg_expected_value" lineKey="avg_acceptance_probability" barUnit="currency" lineUnit="percent" angleLabels />
+          <ComparisonChart data={pricing.by_objective} xKey="optimization_objective" barKey="avg_expected_value" lineKey="avg_acceptance_probability" barUnit="currency" lineUnit="percent" angleLabels barDomainMode="tight" lineDomainMode="tight" />
         </ChartPanel>
         <ChartPanel
           title="Margin by Pricing Strategy"
           note="Balanced strategies preserve margin while managing acceptance risk."
           xAxis="Pricing strategy assigned to the quote/scenario."
-          yAxis="Average expected gross margin in dollars."
-          takeaway="Higher margin is useful only when paired with acceptable win probability."
+          yAxis="Average expected gross margin in dollars. Axis is zoomed to show small differences."
+          takeaway="Higher relative margin is useful only when paired with acceptable win probability."
         >
-          <SimpleBarChart data={pricing.by_pricing_strategy} xKey="pricing_strategy" yKey="avg_expected_margin" color="#b7791f" yUnit="currency" angleLabels />
+          <SimpleBarChart data={pricing.by_pricing_strategy} xKey="pricing_strategy" yKey="avg_expected_margin" color="#2563eb" yUnit="currency" angleLabels yDomainMode="tight" />
         </ChartPanel>
       </section>
       <section className="section insight-strip">
