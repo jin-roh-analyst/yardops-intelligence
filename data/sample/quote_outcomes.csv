@@ -1,0 +1,7 @@
+quote_id,partner_id,claim_id,vehicle_id,yard_id,quote_date,quoted_tow_price,quoted_daily_storage_rate,free_storage_days,expected_days_in_yard,expected_billable_storage_days,estimated_total_cost_to_partner,estimated_salvage_value,net_expected_recovery,competitor_estimated_total_cost,price_gap_vs_competitor,partner_price_sensitivity_score,yard_capacity_utilization,predicted_acceptance_probability,accepted_flag,lost_reason,expected_margin,recommended_tow_price,recommended_daily_storage_rate,pricing_strategy
+QTE000001,P001,CLM000101,VEH000001,YARD_DAL_01,2025-01-06,260,35,5,15,10,610,11800,11190,595,15,28,0.72,0.83,1,accepted,297,250,34,balanced
+QTE000002,P002,CLM000102,VEH000002,YARD_DAL_01,2025-01-09,330,28,3,34,31,1198,9600,8402,1085,113,72,0.89,0.52,1,accepted,520,310,26,partner_retention
+QTE000003,P003,CLM000106,VEH000006,YARD_DAL_01,2025-01-20,215,22,0,31,31,897,3100,2203,760,137,88,1.02,0.29,0,price_too_high,210,180,20,acceptance_max
+QTE000004,P001,CLM000107,VEH000007,YARD_HOU_01,2025-01-23,1180,35,5,18,13,1635,29500,27865,1710,-75,28,0.86,0.78,1,accepted,362,1125,36,margin_max
+QTE000005,P002,CLM000105,VEH000005,YARD_HOU_01,2025-01-17,470,28,3,45,42,1646,16800,15154,1480,166,72,0.92,0.41,0,storage_fee_too_high,510,430,25,balanced
+QTE000006,P003,CLM000103,VEH000003,YARD_DAL_01,2025-01-12,190,22,0,39,39,1048,5200,4152,995,53,88,0.94,0.46,0,competitor_relationship,310,175,20,acceptance_max

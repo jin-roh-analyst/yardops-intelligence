@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-05-16T23:53:28+00:00",
+  "source": "data/raw synthetic CSVs",
+  "summary": {
+    "total_vehicles": 10000,
+    "active_yards": 4,
+    "average_retrieval_time_minutes": 36.76,
+    "median_retrieval_time_minutes": 36.5,
+    "percent_retrievals_under_15_minutes": 4.18,
+    "average_customer_carrier_wait_minutes": 64.73,
+    "average_yard_utilization": 83.1,
+    "quote_acceptance_rate": 69.78,
+    "average_expected_margin": 731.96,
+    "average_partner_net_recovery": 4813.94
+  },
+  "table_row_counts": {
+    "insurance_partners": 40,
+    "yard_locations": 2000,
+    "vehicles": 10000,
+    "vehicle_location_history": 12000,
+    "retrieval_events": 5000,
+    "tow_events": 6000,
+    "yard_storage_events": 10000,
+    "quote_outcomes": 5000,
+    "pricing_scenarios": 50000,
+    "yard_allocation_scenarios": 30000
+  }
+}

@@ -1,0 +1,7 @@
+yard_id,yard_name,region,zone_id,row_id,slot_id,zone_type,distance_to_gate_meters,distance_to_office_meters,distance_to_loading_area_meters,capacity,current_occupancy,occupancy_rate,congestion_score,accessibility_score,equipment_required,surface_type,indoor_flag,active_flag
+YARD_DAL_01,Dallas North Yard,Texas,FAST_ACCESS,FA01,FA01-001,fast_access,75,60,110,1,1,1.00,18,96,none,paved,0,1
+YARD_DAL_01,Dallas North Yard,Texas,A,A03,A03-014,standard,310,260,340,1,1,1.00,42,74,none,gravel,0,1
+YARD_DAL_01,Dallas North Yard,Texas,OVERFLOW,OF02,OF02-088,overflow,1280,1100,1400,1,1,1.00,87,28,forklift,dirt,0,1
+YARD_HOU_01,Houston East Yard,Texas,NR,NR01,NR01-022,non_running,620,540,460,1,1,1.00,64,52,forklift,mixed,0,1
+YARD_HOU_01,Houston East Yard,Texas,HV,HV01,HV01-007,heavy_vehicle,850,760,390,1,1,1.00,58,47,heavy_tow,gravel,0,1
+YARD_HOU_01,Houston East Yard,Texas,LTH,LTH03,LTH03-041,long_term_hold,980,900,1010,1,0,0.00,35,39,loader,dirt,0,1

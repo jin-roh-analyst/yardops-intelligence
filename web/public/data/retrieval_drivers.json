@@ -1,0 +1,262 @@
+{
+  "generated_at": "2026-05-16T23:53:28+00:00",
+  "source": "data/raw synthetic CSVs",
+  "summary": {
+    "retrieval_count": 5000,
+    "delay_rate": 90.04,
+    "avg_blocked_vehicle_count": 2.77
+  },
+  "delay_reasons": [
+    {
+      "delay_reason": "blocked_access",
+      "retrieval_count": 1382,
+      "avg_retrieval_duration_minutes": 38.74,
+      "median_retrieval_duration_minutes": 38.1,
+      "avg_wait_time_minutes": 67.3,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 2.93
+    },
+    {
+      "delay_reason": "congestion",
+      "retrieval_count": 1168,
+      "avg_retrieval_duration_minutes": 39.29,
+      "median_retrieval_duration_minutes": 38.1,
+      "avg_wait_time_minutes": 68.22,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 3.04
+    },
+    {
+      "delay_reason": "equipment_unavailable",
+      "retrieval_count": 839,
+      "avg_retrieval_duration_minutes": 38.71,
+      "median_retrieval_duration_minutes": 38.0,
+      "avg_wait_time_minutes": 67.45,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 2.99
+    },
+    {
+      "delay_reason": "none",
+      "retrieval_count": 498,
+      "avg_retrieval_duration_minutes": 16.8,
+      "median_retrieval_duration_minutes": 17.7,
+      "avg_wait_time_minutes": 36.39,
+      "delay_rate": 0.0,
+      "avg_blocked_vehicle_count": 0.69
+    },
+    {
+      "delay_reason": "weather",
+      "retrieval_count": 489,
+      "avg_retrieval_duration_minutes": 38.81,
+      "median_retrieval_duration_minutes": 37.3,
+      "avg_wait_time_minutes": 68.19,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 2.99
+    },
+    {
+      "delay_reason": "vehicle_not_found",
+      "retrieval_count": 342,
+      "avg_retrieval_duration_minutes": 39.75,
+      "median_retrieval_duration_minutes": 38.8,
+      "avg_wait_time_minutes": 68.48,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 3.17
+    },
+    {
+      "delay_reason": "title_issue",
+      "retrieval_count": 282,
+      "avg_retrieval_duration_minutes": 38.8,
+      "median_retrieval_duration_minutes": 37.9,
+      "avg_wait_time_minutes": 69.05,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 2.98
+    }
+  ],
+  "equipment": [
+    {
+      "equipment_used": "none",
+      "retrieval_count": 3795,
+      "avg_retrieval_duration_minutes": 34.68,
+      "median_retrieval_duration_minutes": 34.5,
+      "avg_wait_time_minutes": 62.04,
+      "delay_rate": 87.93,
+      "avg_blocked_vehicle_count": 2.55
+    },
+    {
+      "equipment_used": "forklift",
+      "retrieval_count": 605,
+      "avg_retrieval_duration_minutes": 48.6,
+      "median_retrieval_duration_minutes": 48.1,
+      "avg_wait_time_minutes": 80.54,
+      "delay_rate": 99.67,
+      "avg_blocked_vehicle_count": 4.06
+    },
+    {
+      "equipment_used": "jump_starter",
+      "retrieval_count": 212,
+      "avg_retrieval_duration_minutes": 29.75,
+      "median_retrieval_duration_minutes": 30.0,
+      "avg_wait_time_minutes": 57.84,
+      "delay_rate": 87.74,
+      "avg_blocked_vehicle_count": 2.69
+    },
+    {
+      "equipment_used": "loader",
+      "retrieval_count": 196,
+      "avg_retrieval_duration_minutes": 39.57,
+      "median_retrieval_duration_minutes": 37.55,
+      "avg_wait_time_minutes": 66.4,
+      "delay_rate": 95.92,
+      "avg_blocked_vehicle_count": 2.73
+    },
+    {
+      "equipment_used": "tow_truck",
+      "retrieval_count": 100,
+      "avg_retrieval_duration_minutes": 48.8,
+      "median_retrieval_duration_minutes": 49.85,
+      "avg_wait_time_minutes": 77.11,
+      "delay_rate": 99.0,
+      "avg_blocked_vehicle_count": 2.91
+    },
+    {
+      "equipment_used": "heavy_tow",
+      "retrieval_count": 92,
+      "avg_retrieval_duration_minutes": 41.65,
+      "median_retrieval_duration_minutes": 42.4,
+      "avg_wait_time_minutes": 70.48,
+      "delay_rate": 96.74,
+      "avg_blocked_vehicle_count": 3.28
+    }
+  ],
+  "blocked_vehicle_buckets": [
+    {
+      "blocked_vehicle_bucket": "3-5",
+      "retrieval_count": 2068,
+      "avg_retrieval_duration_minutes": 41.45,
+      "median_retrieval_duration_minutes": 41.8,
+      "avg_wait_time_minutes": 70.51,
+      "delay_rate": 98.65,
+      "avg_blocked_vehicle_count": 3.84
+    },
+    {
+      "blocked_vehicle_bucket": "1-2",
+      "retrieval_count": 1452,
+      "avg_retrieval_duration_minutes": 31.31,
+      "median_retrieval_duration_minutes": 31.3,
+      "avg_wait_time_minutes": 58.14,
+      "delay_rate": 87.88,
+      "avg_blocked_vehicle_count": 1.54
+    },
+    {
+      "blocked_vehicle_bucket": "0",
+      "retrieval_count": 931,
+      "avg_retrieval_duration_minutes": 24.78,
+      "median_retrieval_duration_minutes": 24.5,
+      "avg_wait_time_minutes": 50.62,
+      "delay_rate": 68.64,
+      "avg_blocked_vehicle_count": 0.0
+    },
+    {
+      "blocked_vehicle_bucket": "6+",
+      "retrieval_count": 549,
+      "avg_retrieval_duration_minutes": 53.78,
+      "median_retrieval_duration_minutes": 53.5,
+      "avg_wait_time_minutes": 84.28,
+      "delay_rate": 99.64,
+      "avg_blocked_vehicle_count": 6.7
+    }
+  ],
+  "zone_types": [
+    {
+      "zone_type": "standard",
+      "retrieval_count": 3120,
+      "avg_retrieval_duration_minutes": 36.75,
+      "median_retrieval_duration_minutes": 36.8,
+      "avg_wait_time_minutes": 65.15,
+      "delay_rate": 92.92,
+      "avg_blocked_vehicle_count": 2.84
+    },
+    {
+      "zone_type": "fast_access",
+      "retrieval_count": 930,
+      "avg_retrieval_duration_minutes": 26.89,
+      "median_retrieval_duration_minutes": 26.75,
+      "avg_wait_time_minutes": 50.97,
+      "delay_rate": 71.61,
+      "avg_blocked_vehicle_count": 1.61
+    },
+    {
+      "zone_type": "non_running",
+      "retrieval_count": 429,
+      "avg_retrieval_duration_minutes": 47.54,
+      "median_retrieval_duration_minutes": 47.2,
+      "avg_wait_time_minutes": 78.7,
+      "delay_rate": 99.53,
+      "avg_blocked_vehicle_count": 3.73
+    },
+    {
+      "zone_type": "long_term_hold",
+      "retrieval_count": 196,
+      "avg_retrieval_duration_minutes": 39.57,
+      "median_retrieval_duration_minutes": 37.55,
+      "avg_wait_time_minutes": 66.4,
+      "delay_rate": 95.92,
+      "avg_blocked_vehicle_count": 2.73
+    },
+    {
+      "zone_type": "overflow",
+      "retrieval_count": 176,
+      "avg_retrieval_duration_minutes": 51.18,
+      "median_retrieval_duration_minutes": 50.55,
+      "avg_wait_time_minutes": 85.03,
+      "delay_rate": 100.0,
+      "avg_blocked_vehicle_count": 4.86
+    },
+    {
+      "zone_type": "heavy_vehicle",
+      "retrieval_count": 149,
+      "avg_retrieval_duration_minutes": 46.6,
+      "median_retrieval_duration_minutes": 46.2,
+      "avg_wait_time_minutes": 75.28,
+      "delay_rate": 97.99,
+      "avg_blocked_vehicle_count": 3.36
+    }
+  ],
+  "pickup_types": [
+    {
+      "pickup_type": "carrier_pickup",
+      "retrieval_count": 2785,
+      "avg_retrieval_duration_minutes": 36.79,
+      "median_retrieval_duration_minutes": 36.5,
+      "avg_wait_time_minutes": 64.55,
+      "delay_rate": 89.62,
+      "avg_blocked_vehicle_count": 2.73
+    },
+    {
+      "pickup_type": "customer_pickup",
+      "retrieval_count": 1589,
+      "avg_retrieval_duration_minutes": 36.6,
+      "median_retrieval_duration_minutes": 36.5,
+      "avg_wait_time_minutes": 64.74,
+      "delay_rate": 90.56,
+      "avg_blocked_vehicle_count": 2.81
+    },
+    {
+      "pickup_type": "internal_move",
+      "retrieval_count": 367,
+      "avg_retrieval_duration_minutes": 37.0,
+      "median_retrieval_duration_minutes": 36.2,
+      "avg_wait_time_minutes": 64.84,
+      "delay_rate": 89.1,
+      "avg_blocked_vehicle_count": 2.88
+    },
+    {
+      "pickup_type": "auction_staging",
+      "retrieval_count": 259,
+      "avg_retrieval_duration_minutes": 37.01,
+      "median_retrieval_duration_minutes": 36.3,
+      "avg_wait_time_minutes": 66.4,
+      "delay_rate": 92.66,
+      "avg_blocked_vehicle_count": 2.77
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "generated_at": "2026-05-16T23:53:28+00:00",
+  "source": "data/raw synthetic CSVs",
+  "summary": {
+    "scenario_count": 30000,
+    "strategy_count": 4,
+    "best_strategy_by_efficiency": "optimized"
+  },
+  "strategies": [
+    {
+      "allocation_strategy": "first_available",
+      "scenario_count": 7500,
+      "avg_retrieval_duration_minutes": 37.24,
+      "avg_wait_time_minutes": 56.18,
+      "avg_travel_distance_meters": 842.43,
+      "avg_blocked_vehicle_count": 2.62,
+      "pct_under_15_min": 0.64,
+      "high_priority_count": 4718,
+      "avg_priority_weighted_time": 28.95,
+      "avg_allocation_efficiency_score": 85.82
+    },
+    {
+      "allocation_strategy": "optimized",
+      "scenario_count": 7500,
+      "avg_retrieval_duration_minutes": 22.41,
+      "avg_wait_time_minutes": 39.36,
+      "avg_travel_distance_meters": 490.25,
+      "avg_blocked_vehicle_count": 2.06,
+      "pct_under_15_min": 15.53,
+      "high_priority_count": 4718,
+      "avg_priority_weighted_time": 17.36,
+      "avg_allocation_efficiency_score": 99.43
+    },
+    {
+      "allocation_strategy": "priority_based",
+      "scenario_count": 7500,
+      "avg_retrieval_duration_minutes": 27.44,
+      "avg_wait_time_minutes": 45.11,
+      "avg_travel_distance_meters": 599.66,
+      "avg_blocked_vehicle_count": 2.26,
+      "pct_under_15_min": 8.15,
+      "high_priority_count": 4718,
+      "avg_priority_weighted_time": 21.07,
+      "avg_allocation_efficiency_score": 94.25
+    },
+    {
+      "allocation_strategy": "random",
+      "scenario_count": 7500,
+      "avg_retrieval_duration_minutes": 43.8,
+      "avg_wait_time_minutes": 62.67,
+      "avg_travel_distance_meters": 790.65,
+      "avg_blocked_vehicle_count": 2.57,
+      "pct_under_15_min": 0.6,
+      "high_priority_count": 4718,
+      "avg_priority_weighted_time": 34.03,
+      "avg_allocation_efficiency_score": 81.74
+    }
+  ],
+  "by_vehicle_type": [
+    {
+      "allocation_strategy": "first_available",
+      "vehicle_type": "SUV",
+      "scenario_count": 2983,
+      "avg_retrieval_duration_minutes": 37.13,
+      "avg_allocation_efficiency_score": 86.11
+    },
+    {
+      "allocation_strategy": "first_available",
+      "vehicle_type": "heavy_vehicle",
+      "scenario_count": 240,
+      "avg_retrieval_duration_minutes": 39.19,
+      "avg_allocation_efficiency_score": 82.6
+    },
+    {
+      "allocation_strategy": "first_available",
+      "vehicle_type": "pickup",
+      "scenario_count": 1431,
+      "avg_retrieval_duration_minutes": 37.27,
+      "avg_allocation_efficiency_score": 85.5
+    },
+    {
+      "allocation_strategy": "first_available",
+      "vehicle_type": "sedan",
+      "scenario_count": 2640,
+      "avg_retrieval_duration_minutes": 37.1,
+      "avg_allocation_efficiency_score": 86.08
+    },
+    {
+      "allocation_strategy": "first_available",
+      "vehicle_type": "van",
+      "scenario_count": 206,
+      "avg_retrieval_duration_minutes": 38.19,
+      "avg_allocation_efficiency_score": 84.09
+    },
+    {
+      "allocation_strategy": "optimized",
+      "vehicle_type": "SUV",
+      "scenario_count": 2983,
+      "avg_retrieval_duration_minutes": 22.51,
+      "avg_allocation_efficiency_score": 99.46
+    },
+    {
+      "allocation_strategy": "optimized",
+      "vehicle_type": "heavy_vehicle",
+      "scenario_count": 240,
+      "avg_retrieval_duration_minutes": 21.68,
+      "avg_allocation_efficiency_score": 99.61
+    },
+    {
+      "allocation_strategy": "optimized",
+      "vehicle_type": "pickup",
+      "scenario_count": 1431,
+      "avg_retrieval_duration_minutes": 22.44,
+      "avg_allocation_efficiency_score": 99.45
+    },
+    {
+      "allocation_strategy": "optimized",
+      "vehicle_type": "sedan",
+      "scenario_count": 2640,
+      "avg_retrieval_duration_minutes": 22.37,
+      "avg_allocation_efficiency_score": 99.37
+    },
+    {
+      "allocation_strategy": "optimized",
+      "vehicle_type": "van",
+      "scenario_count": 206,
+      "avg_retrieval_duration_minutes": 22.03,
+      "avg_allocation_efficiency_score": 99.5
+    },
+    {
+      "allocation_strategy": "priority_based",
+      "vehicle_type": "SUV",
+      "scenario_count": 2983,
+      "avg_retrieval_duration_minutes": 27.55,
+      "avg_allocation_efficiency_score": 94.25
+    },
+    {
+      "allocation_strategy": "priority_based",
+      "vehicle_type": "heavy_vehicle",
+      "scenario_count": 240,
+      "avg_retrieval_duration_minutes": 28.55,
+      "avg_allocation_efficiency_score": 92.23
+    },
+    {
+      "allocation_strategy": "priority_based",
+      "vehicle_type": "pickup",
+      "scenario_count": 1431,
+      "avg_retrieval_duration_minutes": 27.47,
+      "avg_allocation_efficiency_score": 94.23
+    },
+    {
+      "allocation_strategy": "priority_based",
+      "vehicle_type": "sedan",
+      "scenario_count": 2640,
+      "avg_retrieval_duration_minutes": 27.24,
+      "avg_allocation_efficiency_score": 94.41
+    },
+    {
+      "allocation_strategy": "priority_based",
+      "vehicle_type": "van",
+      "scenario_count": 206,
+      "avg_retrieval_duration_minutes": 26.87,
+      "avg_allocation_efficiency_score": 94.76
+    },
+    {
+      "allocation_strategy": "random",
+      "vehicle_type": "SUV",
+      "scenario_count": 2983,
+      "avg_retrieval_duration_minutes": 43.92,
+      "avg_allocation_efficiency_score": 81.59
+    },
+    {
+      "allocation_strategy": "random",
+      "vehicle_type": "heavy_vehicle",
+      "scenario_count": 240,
+      "avg_retrieval_duration_minutes": 47.89,
+      "avg_allocation_efficiency_score": 75.6
+    },
+    {
+      "allocation_strategy": "random",
+      "vehicle_type": "pickup",
+      "scenario_count": 1431,
+      "avg_retrieval_duration_minutes": 43.71,
+      "avg_allocation_efficiency_score": 82.06
+    },
+    {
+      "allocation_strategy": "random",
+      "vehicle_type": "sedan",
+      "scenario_count": 2640,
+      "avg_retrieval_duration_minutes": 43.36,
+      "avg_allocation_efficiency_score": 82.29
+    },
+    {
+      "allocation_strategy": "random",
+      "vehicle_type": "van",
+      "scenario_count": 206,
+      "avg_retrieval_duration_minutes": 43.68,
+      "avg_allocation_efficiency_score": 81.88
+    }
+  ]
+}

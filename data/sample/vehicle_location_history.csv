@@ -1,0 +1,11 @@
+location_event_id,vehicle_id,yard_id,assigned_zone_id,assigned_row_id,assigned_slot_id,assignment_date,relocation_count,relocated_flag,current_location_flag,initial_priority_score,final_priority_score,allocation_strategy,assigned_by,assignment_reason
+LOC000001,VEH000001,YARD_DAL_01,FAST_ACCESS,FA01,FA01-001,2025-01-06 10:05:00,0,0,1,87.4,87.4,optimized,system,high_priority
+LOC000002,VEH000002,YARD_DAL_01,OVERFLOW,OF02,OF02-088,2025-01-09 12:20:00,0,0,0,63.8,63.8,first_available,yard_manager,overflow_capacity
+LOC000003,VEH000002,YARD_DAL_01,A,A03,A03-014,2025-02-02 09:15:00,1,1,1,63.8,72.5,priority_based,system,sold_pickup_staging
+LOC000004,VEH000003,YARD_DAL_01,A,A03,A03-014,2025-01-12 15:10:00,0,0,1,39.6,39.6,random,yard_manager,standard_storage
+LOC000005,VEH000004,YARD_HOU_01,NR,NR01,NR01-022,2025-01-14 09:05:00,0,0,1,80.1,80.1,priority_based,system,special_equipment
+LOC000006,VEH000005,YARD_HOU_01,LTH,LTH03,LTH03-041,2025-01-17 11:30:00,0,0,1,61.3,61.3,first_available,yard_manager,long_term_hold
+LOC000007,VEH000006,YARD_DAL_01,OVERFLOW,OF02,OF02-088,2025-01-20 13:00:00,0,0,1,33.5,33.5,first_available,simulation,overflow_capacity
+LOC000008,VEH000007,YARD_HOU_01,HV,HV01,HV01-007,2025-01-23 16:25:00,0,0,1,84.9,84.9,optimized,system,special_equipment
+LOC000009,VEH000008,YARD_DAL_01,A,A03,A03-014,2025-01-25 10:20:00,0,0,0,60.7,60.7,random,yard_manager,standard_storage
+LOC000010,VEH000008,YARD_DAL_01,FAST_ACCESS,FA01,FA01-001,2025-02-21 08:40:00,1,1,1,60.7,69.2,priority_based,system,sold_pickup_staging

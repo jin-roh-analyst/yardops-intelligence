@@ -1,0 +1,6 @@
+tow_event_id,claim_id,vehicle_id,partner_id,origin_zip,origin_city,origin_state,yard_id,tow_distance_miles,tow_request_time,tow_completed_time,tow_duration_hours,tow_type,base_tow_cost,fuel_surcharge,labor_cost,third_party_tow_cost,internal_total_tow_cost,quoted_tow_price,accepted_flag,competitor_estimated_price,gross_tow_margin,outsourced_flag
+TOW000001,CLM000101,VEH000001,P001,75024,Plano,TX,YARD_DAL_01,18.4,2025-01-06 07:20:00,2025-01-06 10:10:00,2.8,standard,105,18,55,0,178,260,1,245,82,0
+TOW000002,CLM000102,VEH000002,P002,76010,Arlington,TX,YARD_DAL_01,31.2,2025-01-09 08:00:00,2025-01-09 13:45:00,5.8,priority,145,32,85,0,262,330,1,315,68,0
+TOW000003,CLM000104,VEH000004,P001,77520,Baytown,TX,YARD_HOU_01,42.8,2025-01-14 06:45:00,2025-01-14 14:05:00,7.3,after_hours,160,40,110,245,555,690,1,720,135,1
+TOW000004,CLM000106,VEH000006,P003,75149,Mesquite,TX,YARD_DAL_01,14.7,2025-01-20 09:30:00,2025-01-20 12:10:00,2.7,standard,90,12,45,0,147,215,0,180,68,0
+TOW000005,CLM000107,VEH000007,P001,77373,Spring,TX,YARD_HOU_01,27.6,2025-01-23 10:15:00,2025-01-23 17:30:00,7.3,heavy_vehicle,280,55,160,420,915,1180,1,1240,265,1

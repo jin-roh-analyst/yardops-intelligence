@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-05-16T23:53:28+00:00",
+  "source": "data/raw synthetic CSVs",
+  "summary": {
+    "scenario_count": 50000,
+    "recommended_scenario_count": 4554,
+    "avg_scenario_expected_margin": 316.16,
+    "avg_scenario_expected_value": 266.25
+  },
+  "by_objective": [
+    {
+      "optimization_objective": "balanced_score",
+      "scenario_count": 23997,
+      "avg_acceptance_probability": 68.51,
+      "avg_expected_margin": 316.39,
+      "avg_expected_value": 266.86,
+      "recommended_count": 2177
+    },
+    {
+      "optimization_objective": "maximize_acceptance",
+      "scenario_count": 12020,
+      "avg_acceptance_probability": 68.53,
+      "avg_expected_margin": 309.58,
+      "avg_expected_value": 260.24,
+      "recommended_count": 1093
+    },
+    {
+      "optimization_objective": "maximize_expected_margin",
+      "scenario_count": 13983,
+      "avg_acceptance_probability": 68.53,
+      "avg_expected_margin": 321.43,
+      "avg_expected_value": 270.36,
+      "recommended_count": 1284
+    }
+  ],
+  "by_pricing_strategy": [
+    {
+      "pricing_strategy": "acceptance_max",
+      "scenario_count": 11100,
+      "avg_total_partner_cost": 1547.95,
+      "avg_expected_margin": 310.24,
+      "avg_expected_value": 262.81,
+      "recommended_count": 1004
+    },
+    {
+      "pricing_strategy": "balanced",
+      "scenario_count": 16930,
+      "avg_total_partner_cost": 1536.17,
+      "avg_expected_margin": 322.48,
+      "avg_expected_value": 272.43,
+      "recommended_count": 1539
+    },
+    {
+      "pricing_strategy": "capacity_control",
+      "scenario_count": 5240,
+      "avg_total_partner_cost": 1521.19,
+      "avg_expected_margin": 307.05,
+      "avg_expected_value": 256.78,
+      "recommended_count": 486
+    },
+    {
+      "pricing_strategy": "margin_max",
+      "scenario_count": 9790,
+      "avg_total_partner_cost": 1530.63,
+      "avg_expected_margin": 316.25,
+      "avg_expected_value": 263.57,
+      "recommended_count": 886
+    },
+    {
+      "pricing_strategy": "partner_retention",
+      "scenario_count": 6940,
+      "avg_total_partner_cost": 1520.31,
+      "avg_expected_margin": 316.98,
+      "avg_expected_value": 267.61,
+      "recommended_count": 639
+    }
+  ],
+  "recommended_summary": [
+    {
+      "pricing_strategy": "acceptance_max",
+      "recommended_quotes": 1004,
+      "avg_recommended_tow_price": 423.26,
+      "avg_recommended_daily_storage_rate": 33.03,
+      "avg_recommended_partner_cost": 1847.76,
+      "avg_recommended_expected_value": 515.84
+    },
+    {
+      "pricing_strategy": "balanced",
+      "recommended_quotes": 1539,
+      "avg_recommended_tow_price": 422.51,
+      "avg_recommended_daily_storage_rate": 33.19,
+      "avg_recommended_partner_cost": 1831.66,
+      "avg_recommended_expected_value": 522.46
+    },
+    {
+      "pricing_strategy": "capacity_control",
+      "recommended_quotes": 486,
+      "avg_recommended_tow_price": 423.37,
+      "avg_recommended_daily_storage_rate": 33.73,
+      "avg_recommended_partner_cost": 1810.37,
+      "avg_recommended_expected_value": 491.91
+    },
+    {
+      "pricing_strategy": "margin_max",
+      "recommended_quotes": 886,
+      "avg_recommended_tow_price": 427.05,
+      "avg_recommended_daily_storage_rate": 33.38,
+      "avg_recommended_partner_cost": 1844.3,
+      "avg_recommended_expected_value": 516.13
+    },
+    {
+      "pricing_strategy": "partner_retention",
+      "recommended_quotes": 639,
+      "avg_recommended_tow_price": 429.41,
+      "avg_recommended_daily_storage_rate": 33.22,
+      "avg_recommended_partner_cost": 1813.11,
+      "avg_recommended_expected_value": 512.85
+    }
+  ]
+}

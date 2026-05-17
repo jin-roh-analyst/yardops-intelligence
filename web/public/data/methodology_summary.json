@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-05-16T23:53:28+00:00",
+  "source": "data/raw synthetic CSVs",
+  "summary": {
+    "project": "YardOps Intelligence",
+    "data_type": "Synthetic operational analytics data",
+    "pipeline": "Raw CSVs are cleaned, joined, aggregated, and exported as static JSON for the frontend."
+  },
+  "source_tables": [
+    {
+      "table": "insurance_partners",
+      "rows": 40
+    },
+    {
+      "table": "yard_locations",
+      "rows": 2000
+    },
+    {
+      "table": "vehicles",
+      "rows": 10000
+    },
+    {
+      "table": "vehicle_location_history",
+      "rows": 12000
+    },
+    {
+      "table": "retrieval_events",
+      "rows": 5000
+    },
+    {
+      "table": "tow_events",
+      "rows": 6000
+    },
+    {
+      "table": "yard_storage_events",
+      "rows": 10000
+    },
+    {
+      "table": "quote_outcomes",
+      "rows": 5000
+    },
+    {
+      "table": "pricing_scenarios",
+      "rows": 50000
+    },
+    {
+      "table": "yard_allocation_scenarios",
+      "rows": 30000
+    }
+  ],
+  "assumptions": [
+    "Vehicles in farther, more congested zones usually have longer retrieval times.",
+    "Non-running and heavy vehicles require more equipment and take longer to retrieve.",
+    "Higher quoted prices and storage rates reduce acceptance for price-sensitive partners.",
+    "Optimized allocation improves retrieval outcomes for high-priority vehicles.",
+    "The data is synthetic and does not contain confidential or real company records."
+  ],
+  "exports": [
+    "metrics.json",
+    "yard_zone_performance.json",
+    "retrieval_drivers.json",
+    "allocation_strategy_comparison.json",
+    "partner_performance.json",
+    "pricing_scenarios_summary.json",
+    "vehicles_sample.json",
+    "methodology_summary.json"
+  ]
+}

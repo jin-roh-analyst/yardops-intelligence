@@ -1,0 +1,9 @@
+storage_event_id,vehicle_id,partner_id,yard_id,arrival_date,release_date,days_in_yard,free_storage_days,billable_storage_days,daily_storage_rate,total_storage_fee,yard_cost_per_day,total_yard_cost,storage_margin,capacity_utilization_at_arrival,long_hold_flag,storage_billing_status
+STG000001,VEH000001,P001,YARD_DAL_01,2025-01-06,2025-01-21,15,5,10,35,350,9,135,215,0.72,0,collected
+STG000002,VEH000002,P002,YARD_DAL_01,2025-01-09,,48,3,45,28,1260,11,528,732,0.89,1,billable
+STG000003,VEH000003,P003,YARD_DAL_01,2025-01-12,,39,0,39,22,858,8,312,546,0.94,1,disputed
+STG000004,VEH000004,P001,YARD_HOU_01,2025-01-14,2025-02-03,20,5,15,35,525,12,240,285,0.81,0,collected
+STG000005,VEH000005,P002,YARD_HOU_01,2025-01-17,,45,3,42,28,1176,14,630,546,0.92,1,billable
+STG000006,VEH000006,P003,YARD_DAL_01,2025-01-20,,31,0,31,22,682,9,279,403,1.02,1,billable
+STG000007,VEH000007,P001,YARD_HOU_01,2025-01-23,2025-02-08,16,5,11,35,385,18,288,97,0.86,0,collected
+STG000008,VEH000008,P002,YARD_DAL_01,2025-01-25,,28,3,25,28,700,10,280,420,0.78,0,waived

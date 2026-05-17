@@ -1,0 +1,4 @@
+partner_id,partner_name,partner_tier,monthly_claim_volume,avg_vehicle_salvage_value,price_sensitivity_score,service_level_requirement,contract_type,current_tow_rate,current_daily_storage_rate,free_storage_days,historical_win_rate,target_margin,relationship_score,active_flag
+P001,NorthStar Mutual,strategic,850,12800,28,premium,preferred_partner,260,35,5,0.86,0.30,92,1
+P002,LonePeak Casualty,regional,240,7400,72,priority,volume_based,210,28,3,0.63,0.24,68,1
+P003,Riverbend Claims,local,55,5200,88,standard,spot,175,22,0,0.47,0.18,41,1
