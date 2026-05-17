@@ -54,7 +54,7 @@ export default async function YardSimulatorPage() {
           yAxis="Average occupancy rate as a percent."
           takeaway="High utilization in access-critical zones can reduce the benefit of optimized placement."
         >
-          <SimpleBarChart data={zoneUtilization} xKey="zone_id" yKey="occupancy_percent" color="#0f766e" yUnit="percent" fullLabelKey="full_zone_name" />
+          <SimpleBarChart data={zoneUtilization} xKey="zone_id" yKey="occupancy_percent" color="#0ea5e9" yUnit="percent" fullLabelKey="full_zone_name" />
         </ChartPanel>
         <ChartPanel
           title="Optimized Efficiency by Vehicle Type"
